@@ -1,4 +1,7 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
+:root {
+  --padding: 10px;
+  --title-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --primary-grid-gap: 20px;
+  --list-grid-gap: 10px;
+  --images-grid-gap: 10px;
+}
