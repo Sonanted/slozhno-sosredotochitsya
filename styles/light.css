@@ -8,14 +8,11 @@
   --zone-decor-color: var(--text-color);
   --text-decor-color: var(--text-color);
   --background-image: url(../images/cover-image-light.png);
+  --header-rec-display: none;
 
   @media (width >= 1024px) {
     --title-shadow-color: #ff0070;
   }
-}
-
-.page.theme_light .header__decoration {
-  display: none;
 }
 
 @media (prefers-color-scheme: light) {
@@ -29,10 +26,7 @@
     --zone-decor-color: var(--text-color);
     --text-decor-color: var(--text-color);
     --background-image: url(../images/cover-image-light.png);
-  }
-
-  .header__decoration {
-    display: none;
+    --header-rec-display: none;
   }
 }
 

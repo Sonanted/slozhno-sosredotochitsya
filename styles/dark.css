@@ -8,6 +8,7 @@
   --zone-decor-color: var(--accent-color);
   --text-decor-color: var(--background-color);
   --background-image: url(../images/cover-image-dark.png);
+  --header-rec-display: block;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -21,5 +22,6 @@
     --zone-decor-color: var(--accent-color);
     --text-decor-color: var(--background-color);
     --background-image: url(../images/cover-image-dark.png);
+    --header-rec-display: block;
   }
 }

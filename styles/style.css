@@ -1,25 +1,19 @@
 .page {
-  background-color: var(--background-color);
-  background: var(--background-image);
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+  background: fixed var(--background-color) var(--background-image) no-repeat
+    center / cover;
 }
 
-.grid {
+.display-layout {
   display: grid;
   gap: var(--primary-grid-gap);
 }
 
-.grid-list {
+.display-layout-list {
   display: grid;
   gap: var(--list-grid-gap);
 }
 
-.grid__images {
+.display-layout-images {
   display: grid;
   gap: var(--images-grid-gap);
 }
@@ -59,6 +53,7 @@
 }
 
 .header {
+  min-block-size: 668px;
   display: grid;
   grid-template-rows: 1fr auto 1fr;
   align-items: center;
@@ -67,6 +62,7 @@
 }
 
 .header__decoration {
+  display: var(--header-rec-display);
   position: absolute;
   text-transform: uppercase;
   top: calc(var(--padding));
@@ -91,7 +87,7 @@
 }
 
 .header__theme-menu-list {
-  padding-block-start: 5px;
+  padding-block-start: 6px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -110,7 +106,7 @@
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid var(--heading-color);
+  outline: 1px solid rgb(from var(--heading-color) r g b / 0.4);
 }
 
 .header__theme-menu-button:focus {
@@ -123,7 +119,7 @@
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid var(--heading-color);
+  outline: 1px solid var(--heading-color);
   pointer-events: none;
 }
 
@@ -147,6 +143,7 @@
   flex-direction: column;
   gap: 50px;
   padding: 0 var(--padding);
+  margin-block: 40px;
 }
 
 .section__heading {
@@ -167,7 +164,7 @@
 }
 
 .link:hover {
-  border-block-end: 1px solid var(--text-color)
+  border-block-end: 1px solid var(--text-color);
 }
 
 .link:focus {
@@ -176,7 +173,7 @@
 
 .link:focus-visible {
   outline: none;
-  border: 1px solid var(--text-color)
+  border: 1px solid var(--text-color);
 }
 
 .container__list-item__heading {
@@ -187,19 +184,20 @@
   color: var(--text-color);
 }
 
-
-
 .images__list-item__image {
   display: block;
   inline-size: 100%;
   block-size: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .footer {
   display: grid;
   align-items: center;
   justify-content: center;
+  padding: 0 var(--padding);
+  min-block-size: 668px;
 }
 
 .footer__text {
@@ -207,16 +205,6 @@
 }
 
 @media (width >= 768px) {
-  :root {
-    --padding: 20px;
-    --title-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    --images-grid-gap: 20px;
-  }
-
-  .page {
-    gap: 60px;
-  }
-
   .header {
     padding: 0 var(--padding) 0 0;
   }
@@ -232,6 +220,7 @@
 
   .main {
     gap: 80px;
+    margin-block: 60px;
   }
 
   .main__section:nth-child(2n + 1) {
